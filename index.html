@@ -3,182 +3,365 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portf.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <title>Akansha Verma | Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background-color: #4a90e2;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        header img {
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        /* Home Section */
+        #home {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 90vh;
+            padding: 2rem;
+            background: linear-gradient(to right, #4a90e2 50%, #f5f7fa 50%);
+        }
+
+        #home .content h1 {
+            font-size: 3rem;
+            color: #fff;
+        }
+
+        #home .content h2 {
+            font-size: 1.5rem;
+            color: #f0f0f0;
+        }
+
+        #home .buttons {
+            margin-top: 20px;
+        }
+
+        #home .buttons button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #f2545b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #home .buttons button:hover {
+            background-color: #d13b3f;
+        }
+
+        #home img {
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* About Me Section */
+        #about {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            color: #4a90e2;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 1.5rem auto;
+        }
+
+        /* Skills Section */
+        #skills {
+            background-color: #f5f7fa;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        #skills .heading {
+            margin-bottom: 2rem;
+        }
+
+        #skills .skills-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .bars-box {
+            margin: 1rem;
+            width: 200px;
+            text-align: left;
+        }
+
+        .light-bar {
+            background-color: #ddd;
+            height: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        .percent-bar {
+            height: 10px;
+            border-radius: 5px;
+        }
+
+        .html-bar { width: 75%; background-color: #4a90e2; }
+        .css-bar { width: 70%; background-color: #f2545b; }
+        .mysql-bar { width: 85%; background-color: #50b848; }
+        .cpp-bar { width: 90%; background-color: #f2545b; }
+        .c-bar { width: 90%; background-color: #50b848; }
+        .java-bar { width: 70%; background-color: #f2545b; }
+        .python-bar { width: 75%; background-color: #4a90e2; }
+
+        /* Projects Section */
+        #projects {
+            padding: 4rem 2rem;
+            background-color: #fff;
+        }
+
+        #projects .project-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background-color: #f5f7fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #projects h2 {
+            text-align: center;
+            color: #4a90e2;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        #contact .sub-title {
+            font-size: 2rem;
+        }
+
+        #contact .contact-item {
+            margin-bottom: 1rem;
+        }
+
+        #contact .social-icons {
+            margin-top: 2rem;
+        }
+
+        #contact .social-icons a {
+            color: #fff;
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+
+        #contact form input, #contact form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #contact form input[type="submit"] {
+            background-color: #f2545b;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #contact form input[type="submit"]:hover {
+            background-color: #d13b3f;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
 </head>
 <body>
     
     <header>
-    <div class="logo">
+        <div class="logo">
+            <img src="images/logo1.jpg" alt="Logo">
+        </div>
         <nav>
-    <img src="images/logo1.jpg" alt="Logo">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-     <section id="home" div class ="home">
+
+    <section id="home">
+        <div class="content">
+            <h1>Hi, I'm <span>Akansha Verma</span></h1>
+            <h2>Enthusiastic Coder and Frontend Developer</h2>
+            <div class="buttons">
+                <button onclick="window.open('images/resume.pdf', '_blank')">Hire Me</button>
+                <button onclick="window.location.href = '#projects'">See Projects</button>
+            </div>
+        </div>
         <div class="header-image">
             <img src="images/v3.jpg" alt="Header Image">
         </div>
-        <div class="content">
-        <h1>Hi, I'm <span>Akansha Verma</span></h1>
-        <h2>Enthusiastic Coder and Frontend Developer</h2>
-        <div class="buttons">
-            <button onclick="window.open('images/resume.pdf', '_blank')">Hire Me</button>
-            <button onclick="window.location.href = '#projects'">See Projects</button>
-        </div>
-        </div>
     </section>
-    <section id ="about" div class="about-me">
+
+    <section id="about">
         <h2>About Me</h2>
         <p>
             I am Akansha Verma, currently pursuing a B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence from 
-            Institute of Engineering and Technology, Lucknow.
-            I am an avid learner with keen interest in problem solving skills.
-            My skills include programming languages like C++, C and Python
-             along with frontend tools like HTML,CSS and JavaScript, Bootstrap.
-            I have done many projects, 
-            you can scroll below to see them in detail. 
-           In addition to my technical expertise, I possess proficiency in utilizing Microsoft Word,
-               Excel, and PowerPoint. These essential software tools enable me to create professional documents, 
-               organize and analyze data efficiently, and develop impactful presentations. My adeptness with
-                MS Office suite enhances my ability to communicate effectively and streamline tasks across
-                 various projects. With a strong command of these applications, I can seamlessly integrate 
-                 technology into my work to achieve optimal results.        
-                     I believe I can do anything, if I put my mind to it.
-
+            Institute of Engineering and Technology, Lucknow. I am an avid learner with a keen interest in problem-solving and software development.
+            My skills include programming languages like C++, C, and Python, along with frontend tools like HTML, CSS, JavaScript, and Bootstrap.
         </p>
-    </div>
-    <section class="skills" id="skills">
-        <div class= "heading">
-            <h2>Skills</h2>
-            <span>My Skills</span>
-        </div>
-<div class ="skills-container">
-    <div class="bars">
-        <div class="bars-box">
-            <h3>HTML</h3>
-            <div class="light-bar"></div>
-            <span>75%</span>
-            <div class="percent-bar html-bar"></div>
-        </div>
-    <div class="bars">
-        <div class="bars-box">
-            <h3>CSS</h3>
-            <span>70%</span>
-            <div class="light-bar"></div>
-            <div class="percent-bar css-bar"></div>
-            </div>
-    <div class="bars">
-        <div class="bars-box">
-                    <h3>MySQL</h3>
-                    <span>85%</span>
-                    <div class="light-bar"></div>
-                    <div class="percent-bar mysql-bar"></div>
-                </div>
-    <div class="bars">
-        <div class="bars-box">
-                    <h3>C++</h3>
-                        <span>90%</span>
-                        <div class="light-bar"></div>
-                        <div class="percent-bar cpp-bar"></div>
-                    </div>
-    <div class="bars">
-        <div class="bars-box">
-                            <h3>C</h3>
-                            <span>90%</span>
-                            <div class="light-bar"></div>
-                            <div class="percent-bar c-bar"></div>
-                        </div>
-    <div class="bars">
-        <div class="bars-box">
-                                <h3>JavaSript</h3>
-                                <span>70%</span>
-                                <div class="light-bar"></div>
-                                <div class="percent-bar java-bar"></div>
-                            </div>
-     <div class="bars">
-            <div class="bars-box">
-                                    <h3>Python</h3>
-                                    <span>75%</span>
-                                    <div class="light-bar"></div>
-                                    <div class="percent-bar python-bar"></div>
-                                </div>
-        </div>
-    </div>
     </section>
- <div class="projects" id="projects">
+
+    <section id="skills">
+        <div class="heading">
+            <h2>Skills</h2>
+        </div>
+        <div class="skills-container">
+            <div class="bars-box">
+                <h3>HTML</h3>
+                <div class="light-bar"></div>
+                <div class="percent-bar html-bar"></div>
+                <span>75%</span>
+            </div>
+            <div class="bars-box">
+                <h3>CSS</h3>
+                <div class="light-bar"></div>
+                <div class="percent-bar css-bar"></div>
+                <span>70%</span>
+            </div>
+            <div class="bars-box">
+                <h3>MySQL</h3>
+                <div class="light-bar"></div>
+                <div class="percent-bar mysql-bar"></div>
+                <span>85%</span>
+            </div>
+            <div class="bars-box">
+                <h3>C++</h3>
+                <div class="light-bar"></div>
+                <div class="percent-bar cpp-bar"></div>
+                <span>90%</span>
+            </div>
+            <div class="bars-box">
+                <h3>C</h3>
+                <div class="light-bar"></div>
+                <div class="percent-bar c-bar"></div>
+                <span>90%</span>
+            </div>
+            <div class="bars-box">
+                <h3>JavaScript</h3>
+                <div class="light-bar"></div>
+                <div class="percent-bar java-bar"></div>
+                <span>70%</span>
+            </div>
+            <div class="bars-box">
+                <h3>Python</h3>
+                <div class="light-bar"></div>
+                <div class="percent-bar python-bar"></div>
+                <span>75%</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
         <h2>Projects</h2>
         <div class="project-item">
             <h3>Grocery-Store-Management-System</h3>
-            <p>Software application for grocery stores enabling product addition, updating, and categorization by departments,
-                brands, or other criteria, streamlining store operations.
-                
-            </p>
+            <p>Software application for grocery stores enabling product addition, updating, and categorization by departments, brands, or other criteria, streamlining store operations.</p>
         </div>
         <div class="project-item">
-            <h3>Food Delivery Website </h3>
-            <p>Currently working on this website. It is a courier service which implements the website’s visual design , Creating
-                intuitive and responsive user interfaces for browsing menus, selecting items, and placing orders.
-                
-            </p>
+            <h3>Food Delivery Website</h3>
+            <p>Currently working on this website. It is a courier service implementing the website’s visual design and creating intuitive, responsive user interfaces for browsing menus, selecting items, and placing orders.</p>
         </div>
         <div class="project-item">
             <h3>TIC TAC TOE Game</h3>
-            <p>The website provides a user-friendly interface for players to engage in this simple yet entertaining game
-            </p>
+            <p>A simple web game with a user-friendly interface for two players to enjoy.</p>
         </div>
         <div class="project-item">
             <h3>Personal Portfolio</h3>
-            <p>
-            </p>
+            <p>This portfolio website was designed to showcase my skills, projects, and background as a developer.</p>
         </div>
+    </section>
 
-<div class="contact" id="contact">
-    <div class="container">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <div class="contact-item">
-                    <i class="far fa-envelope"></i><p>akanshav841@gmail.com</p>
-                </div>
-                <div class="social-icons">
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/akansha-verma-623a66232/" target="_blank"> linkedin</a>
-                        <p>www.linkedin.com/in/akansha-verma-623a66232</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/akanshav841" target="_blank">Github</a>
-                        <p>https://github.com/akanshav841</p>
-                    </div>
-                </div>
-                <div class="contact">
-                    <h2>Get in Touch</h2>
-                    <form action="#" method="post">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        <textarea id="message" name="message" placeholder="Your Message" required styl = "width: 415px; height: 137px;" style = "width: 415px; height: 137px" ></textarea>
-                        <input type="submit" value="Send">
-                    </form>
-                </div>
-                </div>
+    <section id="contact">
+        <div class="container">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="contact-item">
+                <i class="far fa-envelope"></i><p>akanshav841@gmail.com</p>
             </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/akansha-verma-623a66232/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/akanshav841" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <h2>Get in Touch</h2>
+            <form action="#" method="post">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send">
+            </form>
         </div>
-    </div>
-    <footer class="copy">
-        <p>&copy; 2023 Akansha Verma| All rights reserved.</p>
-    </div>
-</footer>
-</div>
+    </section>
 
-    
-<!-- </header> -->
+    <footer>
+        <p>&copy; 2023 Akansha Verma | All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
