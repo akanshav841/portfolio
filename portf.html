@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>My Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        /* Header */
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            top: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 50px;
+        }
+
+        header .logo img {
+            width: 140px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 50px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('image.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+            animation: fadeIn 1.5s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #f39c12;
+        }
+
+        .hero h2 {
+            margin-top: 10px;
+            font-size: 1.8rem;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .buttons button {
+            padding: 12px 25px;
+            margin-right: 15px;
+            border: none;
+            border-radius: 50px;
+            background-color: #f39c12;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons button:hover {
+            background-color: #e67e22;
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 50px;
+            background-color: #f8f9fa;
+            animation: fadeInUp 1s ease;
+        }
+
+        .about h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Skills Section */
+        .skills {
+            background-color: #34495e;
+            padding: 100px 50px;
+            color: white;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .skills h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .skills .bar {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .skills h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        /* Contact Section - Adjust "Send" Button */
+.contact input[type="submit"] {
+    background-color: #f39c12;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    border: 2px solid transparent;  /* Adds a border */
+    border-radius: 5px;  /* Slightly rounder */
+}
+
+.contact input[type="submit"]:hover {
+    background-color: #e67e22;
+    border: 2px solid white;  /* Adds a white border on hover */
+}
+
+/* Skills Section - Make bars less circular */
+.skills .bar {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 250px;
+    height:50px;
+    border-radius: 10px;  /* Reduced border-radius for a less circular look */
+    position: relative;
+    overflow: hidden;
+}
+
+.skills .bar span {
+    display: block;
+    height: 100%;
+    background-color: #f39c12;
+    animation: load 2s forwards;
+    border-radius: 10px;  /* Matches the outer bar */
+}
+
+.skills h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #f39c12;  /* Makes skill headers pop */
+    letter-spacing: 1px;  /* Adds spacing to make text more readable */
+}
+/* Adjusting Projects Section */
+.projects {
+    padding: 80px 30px;  /* Decreased padding for more compact layout */
+    background-color: #ecf0f1;  /* Light background for contrast */
+}
+
+.projects h2 {
+    color: #2c3e50;  /* Darker, elegant color */
+}
+
+.projects .project-item h3 {
+    color: #f39c12;  /* Matches the button color */
+}
+
+.projects .project-item p {
+    color: #7f8c8d;  /* Softer text color */
+}
+
+/* Adjusting Skills Section */
+.skills {
+    background-color: #2c3e50;
+    padding: 80px 30px;  /* Reduced padding for a snug fit */
+    color: white;
+}
+
+.skills h2 {
+    color: #f39c12;  /* Highlighted title */
+}
+
+.skills .bar {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.skills h3 {
+    color: #ecf0f1;
+}
+
+.bar span {
+    background-color: #f39c12;  /* Consistent bar fill color */
+}
+
+
+
+        .bar {
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 250px;
+            height: 30px;
+            border-radius: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bar span {
+            display: block;
+            height: 100%;
+            background-color: #f39c12;
+            width: 0;
+            animation: load 2s forwards;
+            border-radius: 25px;
+        }
+
+        .bar.html span { width: 85%; }
+        .bar.css span { width: 75%; }
+        .bar.javascript span { width: 65%; }
+        .bar.python span { width: 90%; }
+
+        @keyframes load {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 100px 50px;
+        }
+
+        .projects h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+        }
+
+        .projects .project-item {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeInUp 1.3s ease;
+        }
+
+        .projects .project-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .projects .project-item p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .projects .project-item:hover {
+            transform: translateY(-10px);
+            transition: transform 0.3s ease;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 50px;
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            animation: fadeInUp 1.4s ease;
+        }
+
+        .contact h2 {
+            font-size: 2.8rem;
+        
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact input, .contact textarea {
+            padding: 5px;
+            margin-bottom: 5px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact input[type="submit"] {
+            background-color: #f39c12;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact input[type="submit"]:hover {
+            background-color: #e67e22;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="AKANSHAlogo1.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="content">
+            <h1>Hi, I'm <span>Akansha Verma</span></h1>
+            <h2>Enthusiastic Coder and Frontend Developer</h2>
+            <div class="buttons">
+                <button onclick="window.open('Akansha_Updated_Resume_28_jan.pdf', '_blank')">Hire Me</button>
+                <button onclick="window.location.href='#projects'">See Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm Akansha Verma, a B.Tech student specializing in Computer Science and Artificial Intelligence. I have a passion for crafting beautiful, 
+            responsive web designs and solving complex coding problems. Over the years, I’ve honed my skills in HTML, CSS, JavaScript, and Python, 
+            and I enjoy combining creativity and logic to bring ideas to life. My focus is to create user-centric designs with optimal performance.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="bar">
+                <h3>HTML</h3>
+                <div class="bar html"><span></span></div>
+            </div>
+            <div class="bar">
+                <h3>CSS</h3>
+                <div class="bar css"><span></span></div>
+            </div>
+            <div class="bar">
+                <h3>JavaScript</h3>
+                <div class="bar javascript"><span></span></div>
+            </div>
+            <div class="bar">
+                <h3>Python</h3>
+                <div class="bar python"><span></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>Weather App</h3>
+            <p>
+                This is a fully functional weather application created using HTML, CSS, and JavaScript. It fetches real-time weather data from a public 
+                API and displays current conditions based on the user's location.
+            </p>
+        </div>
+        <div class="project-item">
+            <h3>Portfolio Website</h3>
+            <p>
+                The very website you're browsing right now! Built from scratch with a clean, responsive design, showcasing my skills and projects. 
+                The site features smooth animations, hover effects, and is fully optimized for mobile viewing.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <form action="https://formspree.io/akanshav841@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Akansha Verma. All Rights Reserved. Connect with me on 
+            <a href="https://www.linkedin.com/in/akansha-verma/" target="_blank" style="color: #f39c12;">LinkedIn</a> 
+            and <a href="https://github.com/akanshaverma" target="_blank" style="color: #f39c12;">GitHub</a>.
+        </p>
+    </footer>
+
+</body>
+</html>
+

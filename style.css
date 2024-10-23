@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #0a0a0a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 20px;
+    filter: drop-shadow(0 0 10px yellowgreen);
+}
+
+.navbar {
+    margin-left: auto;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+ul li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.4s ease;
+}
+
+ul li a:hover {
+    color: yellowgreen;
+    text-decoration: underline;
+}
+
+header .button {
+    margin-right: 30px;
+}
+
+.button .btn {
+    width: 140px;
+    padding: 10px;
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 10px;
+    color: #fff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.button .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px yellowgreen;
+}
+
+/* Home Styles */
+.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home .home-content {
+    margin-top: 110px;
+    margin-left: 150px;
+}
+
+.home-content h3 {
+    color: gray;
+}
+
+.home-content h1 {
+    filter: drop-shadow(0 0 10px green);
+}
+
+.home-content h2 {
+    color: yellowgreen;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.home-content p {
+    color: gray;
+    width: 70%;
+}
+
+.home-content .button {
+    margin-top: 20px;
+}
+
+.button #btn {
+    width: 144px;
+    padding: 9px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.button #btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 30px yellowgreen;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    box-shadow: 0 20px 30px white;
+    margin-top: 100px;
+    margin-right: 150px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+/* About Styles */
+.about {
+    display: flex;
+    gap: 50px;
+    height: 100vh;
+    padding: 20px;
+    background: #151515;
+}
+
+.about .about-content {
+    margin-top: 70px;
+    margin-left: 40px;
+}
+
+.about-content h2 {
+    color: yellowgreen;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.about-content p {
+    color: gray;
+    font-size: 15px;
+    font-weight: bold;
+    width: 80%;
+}
+
+.about-content .button .A-btn {
+    width: 120px;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 12px;
+    box-shadow: 0 0 12px white;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-content .A-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 30px yellowgreen;
+}
+
+.about-content .social-media {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.about-content .social-media li {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.about-content .social-media li:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 30px yellowgreen;
+}
+
+.about-content .social-media li a {
+    color: #fff;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+/* Service Styles */
+.service {
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    background: #0a0a0a;
+}
+
+.service h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: yellowgreen;
+    font-size: 30px;
+}
+
+.service .main-service {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-service .card {
+    border: 1px solid #222;
+    box-shadow: 10px 20px 30px yellowgreen;
+    border-radius: 12px;
+    width: 350px;
+    height: 300px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.main-service .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 22px 30px blue;
+}
+
+.card h2 {
+    color: yellowgreen;
+    margin-top: 20px;
+}
+
+.card p {
+    color: gray;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Contact Styles */
+.contact {
+    width: 100%;
+    height: 100vh;
+    padding: 50px 0;
+    background: #151515;
+}
+
+.contact h1 {
+    text-align: center;
+    color: yellowgreen;
+    margin-bottom: 40px;
+}
+
+.contact .main-contact {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.main-contact form {
+    border: 1px solid blue;
+    border-radius: 10px;
+    box-shadow: 0 22px 30px yellowgreen;
+    width: 300px;
+    padding: 20px;
+    background: transparent;
+    text-align: center;
+}
+
+form input,
+form textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid blue;
+    margin: 10px 0;
+    border-radius: 3px;
+    background-color: transparent;
+    color: #fff;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: gray;
+}
+
+form button {
+    margin-top: 20px;
+}
+
+.C-btn {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid blue;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 3px;
+}
+
+.C-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 22px 30px white;
+    border-radius: 12px;
+}
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    background: #0a0a0a;
+}
+
+.footer h3 {
+    font-size: 15px;
+    font-weight: bold;
+    color: gray;
+}
