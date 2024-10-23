@@ -11,7 +11,8 @@
 
 body {
     width: 100%;
-    height: auto; /* Change to auto for better responsiveness */
+    height: 100vh;
+    position: relative;
     background: #0a0a0a;
     color: #fff;
     line-height: 1.6;
@@ -27,7 +28,7 @@ header {
 
 .logo h1 {
     color: #fff;
-    font-size: 2.2rem; /* Use rem for responsiveness */
+    font-size: 35px;
     font-weight: bold;
     margin-left: 20px;
     filter: drop-shadow(0 0 10px yellowgreen);
@@ -45,7 +46,7 @@ header {
 
 ul li a {
     color: #fff;
-    font-size: 1rem; /* Use rem for responsiveness */
+    font-size: 18px;
     font-weight: 500;
     cursor: pointer;
     transition: color 0.4s ease;
@@ -81,12 +82,11 @@ header .button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .home .home-content {
     margin-top: 110px;
-    margin-left: 20px; /* Reduced margin for smaller screens */
+    margin-left: 150px;
 }
 
 .home-content h3 {
@@ -99,14 +99,13 @@ header .button {
 
 .home-content h2 {
     color: yellowgreen;
-    font-size: 2.5rem; /* Use rem for responsiveness */
+    font-size: 36px;
     font-weight: bold;
 }
 
 .home-content p {
     color: gray;
-    width: 100%; /* Allow full width */
-    max-width: 500px; /* Limit max width */
+    width: 70%;
 }
 
 .home-content .button {
@@ -121,7 +120,7 @@ header .button {
     border-radius: 10px;
     color: #fff;
     cursor: pointer;
-    font-size: 1.1rem; /* Use rem for responsiveness */
+    font-size: 20px;
     font-weight: bold;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -137,7 +136,7 @@ header .button {
     border-radius: 50%;
     box-shadow: 0 20px 30px white;
     margin-top: 100px;
-    margin-right: 20px; /* Reduced margin for smaller screens */
+    margin-right: 150px;
 }
 
 .image img {
@@ -149,29 +148,28 @@ header .button {
 /* About Styles */
 .about {
     display: flex;
-    gap: 20px; /* Reduced gap for smaller screens */
-    height: auto; /* Change to auto for better responsiveness */
+    gap: 50px;
+    height: 100vh;
     padding: 20px;
     background: #151515;
-    flex-direction: column; /* Stack vertically on smaller screens */
 }
 
 .about .about-content {
-    margin-top: 20px; /* Reduced margin for smaller screens */
-    margin-left: 20px; /* Reduced margin for smaller screens */
+    margin-top: 70px;
+    margin-left: 40px;
 }
 
 .about-content h2 {
     color: yellowgreen;
-    font-size: 2rem; /* Use rem for responsiveness */
+    font-size: 33px;
     font-weight: bold;
 }
 
 .about-content p {
     color: gray;
-    font-size: 1rem; /* Use rem for responsiveness */
+    font-size: 15px;
     font-weight: bold;
-    width: 100%; /* Allow full width */
+    width: 80%;
 }
 
 .about-content .button .A-btn {
@@ -182,7 +180,7 @@ header .button {
     border-radius: 12px;
     box-shadow: 0 0 12px white;
     color: #fff;
-    font-size: 1rem; /* Use rem for responsiveness */
+    font-size: 11px;
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -218,14 +216,14 @@ header .button {
 
 .about-content .social-media li a {
     color: #fff;
-    font-size: 1.5rem; /* Use rem for responsiveness */
+    font-size: 21px;
     cursor: pointer;
 }
 
 /* Service Styles */
 .service {
     width: 100%;
-    height: auto; /* Change to auto for better responsiveness */
+    height: auto;
     padding-top: 50px;
     background: #0a0a0a;
 }
@@ -234,14 +232,13 @@ header .button {
     text-align: center;
     margin-bottom: 50px;
     color: yellowgreen;
-    font-size: 2rem; /* Use rem for responsiveness */
+    font-size: 30px;
 }
 
 .service .main-service {
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .main-service .card {
@@ -249,7 +246,7 @@ header .button {
     box-shadow: 10px 20px 30px yellowgreen;
     border-radius: 12px;
     width: 350px;
-    height: auto; /* Change to auto for better responsiveness */
+    height: 300px;
     text-align: center;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
@@ -266,14 +263,14 @@ header .button {
 
 .card p {
     color: gray;
-    font-size: 1rem; /* Use rem for responsiveness */
+    font-size: 14px;
     font-weight: bold;
 }
 
 /* Contact Styles */
 .contact {
     width: 100%;
-    height: auto; /* Change to auto for better responsiveness */
+    height: 100vh;
     padding: 50px 0;
     background: #151515;
 }
@@ -282,7 +279,6 @@ header .button {
     text-align: center;
     color: yellowgreen;
     margin-bottom: 40px;
-    font-size: 2rem; /* Use rem for responsiveness */
 }
 
 .contact .main-contact {
@@ -295,8 +291,7 @@ header .button {
     border: 1px solid blue;
     border-radius: 10px;
     box-shadow: 0 22px 30px yellowgreen;
-    width: 90%; /* Make form responsive */
-    max-width: 400px; /* Limit max width for larger screens */
+    width: 300px;
     padding: 20px;
     background: transparent;
     text-align: center;
@@ -329,7 +324,7 @@ form button {
     background-color: transparent;
     color: #fff;
     cursor: pointer;
-    font-size: 1rem; /* Use rem for responsiveness */
+    font-size: 17px;
     font-weight: bold;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
     border-radius: 3px;
@@ -353,41 +348,7 @@ form button {
 }
 
 .footer h3 {
-    font-size: 1rem; /* Use rem for responsiveness */
+    font-size: 15px;
     font-weight: bold;
     color: gray;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Stack items vertically */
-        align-items: flex-start; /* Align items to start */
-    }
-
-    .navbar ul {
-        flex-direction: column; /* Stack navbar items vertically */
-        gap: 10px;
-    }
-
-    .home .home-content {
-        margin-left: 10px; /* Further reduce margin on mobile */
-        text-align: center; /* Center align text */
-    }
-
-    .image {
-        width: 200px; /* Resize image */
-        height: 200px; /* Resize image */
-        margin-right: 0; /* Remove right margin */
-    }
-
-    .about, .contact {
-        flex-direction: column; /* Stack items vertically */
-        padding: 10px; /* Reduce padding */
-    }
-
-    .main-service .card {
-        width: 90%; /* Full width for cards */
-        max-width: 350px; /* Limit max width */
-    }
-}
+} same for this
