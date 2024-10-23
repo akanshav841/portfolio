@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>My Portfolio</title>
+</head>
+
+<style>
+    body {
+        margin: -5px 26px 78px -13px;
+        padding: 20px 20px;
+        font-family: Arial, sans-serif;
+        background-color: rgb(180, 163, 252);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    
+     header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        position: fixed;
+        width: 100%;
+    }
+    
+    .logo img {
+        width: 173px; 
+        height: 80px; 
+        
+        padding: 30px 67px 742px 41px;
+    }
+    
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    nav ul {
+        display: flex;
+        list-style: none;
+       padding : 10px 60px 631px 758px;
+        height: 30px;
+        width: 10px;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+    }
+    
+    nav ul li a{
+        color: black;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .home{
+        position: relative;
+        width: 2%;
+        height: 59vh;
+        display: flex;
+        align-items: center;
+        padding: 165px 87px 16px 399px;
+    }
+    
+    .content{
+        max-width: 500px;
+        color: black;
+        font-weight: bolder;
+    }
+    .content h1{
+        font-size: 3em;
+    }
+    .content h1 span{
+        color: rgb(4, 0, 32);
+        font-size: 3.2rem;
+        font-weight: bold;
+    }
+    
+    .header-image {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+    }
+    .header-image img {
+        max-width: 104%; 
+        height: 50vh;
+        margin-right: 368px 70px 67px  43px; 
+        padding: 95px 7px -63px 33px;
+    }
+    
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .buttons button {
+        margin-right: 25px;
+        padding: 20px 49px 17px 45px;
+        background-color:rgb(234, 231, 241);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 17px;
+    
+    }
+    
+    .buttons button:hover {
+        background-color: rgb(1, 1, 77);
+        color: rgb(8, 0, 0);
+    }
+    
+    .about-me {
+        margin-top: 213px;
+        padding:296px 433px 29px 65px ;
+    }
+    
+    .about-me h2 {
+        font-size: 41px;
+        font-weight: bold;
+        align-items: center;
+        padding: 22px 71px 455px -1px;
+    }
+    
+    .about-me p {
+        font-size: 16px;
+    }
+    .skills{
+        padding: 79px 20px 20px 20px;
+    }
+    .skills-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: -1rem;
+        margin-top: -1rem;
+    }
+    
+    .bars-box{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+    }
+    .bar-box h2,span{
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    .light-bar{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.6rem;
+        background: hsla(261, 100%, 3%, 0.4);
+        border-radius: 0.5rem;
+    }
+    .percent-bar{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0.6rem;
+        background: rgb(21, 1, 59);
+        border-radius: 0.6rem;
+    }
+    .html-bar{
+        width: 75%;
+    }
+    .css-bar{
+        width: 70%
+    }
+    .mysql-bar{
+        width: 85%
+    }
+    .cpp-bar{
+        width: 90%
+    }
+    .c-bar{
+        width: 90%
+    }
+    .java-bar{
+        width: 80%;
+    }
+    .python-bar{
+        width: 80%;
+    }
+    
+    .projects {
+        margin-top: 100px;
+    }
+    
+    .projects h2 {
+        font-size: 47px;
+        font-weight: bold;
+    }
+    
+    .project-item {
+        margin-bottom: 20px;
+    }
+    
+    .project-item h3 {
+        font-size: 25px;
+        font-weight: bold;
+        color: rgb(15, 1, 49);
+    }
+    
+    .project-item p {
+        font-size: 18px;
+    }
+    
+    .contact-left{
+        flex-basis: 35%;
+        padding:  67px 25px 0px;
+        font-size: 30px;
+    }
+    .contact-right{
+        flex-basis: 60%;
+    }
+    .contact-left p{
+        margin-top: 30px;
+    }
+    .contact-left p i{
+         color: rgb(10, 1, 53);
+         margin-right: 15px;
+         font-size: 15px;
+    }
+    .contact-item{
+        color: rgb(11, 1, 65);
+    }
+    .social-icons{
+        margin-top: 30px;
+    }
+    .social-icons a{
+        text-decoration: none;
+        font-size: 20px;
+        margin-right: 15px;
+        color: rgb(1, 15, 1);
+        font-weight: bold;
+        display: inline-block;
+    }
+    
+    .contact-right {
+        margin-top: 40px;
+        text-align: center;
+    }
+    
+    .contact-right h2 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .contact-item i {
+        font-size: 30px;
+        margin-right: 10px;
+    }
+    .contact-item p {
+        font-size: 16px;
+    }
+    
+    .contact {
+        background-color:rgb(250, 240, 240);
+        padding: 50px 20px;
+        text-align: center;
+    }
+    
+    .contact h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+        color: rgb(56, 42, 253);
+    }
+    
+    input, textarea {
+        padding: 11px;
+        margin-bottom: 13px;
+        width: 104%;
+        box-sizing: border-box;
+        color: rgb(47, 33, 248);
+    }
+    
+    input[type="submit"] {
+        background-color: rgb(95, 52, 252);
+        color: rgb(7, 1, 37);
+        font-weight: bold;
+        border: none;
+        padding: 15px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+        background-color:rgb(10, 1, 8);
+    }
+    
+    .contact p {
+        font-size: 17px;
+        margin-bottom: 27px;
+    }
+    
+    footer {
+        background-color: rgb(79, 67, 253);
+        color: black;
+        text-align: center;
+        padding: 32px 455px 40px 22px;
+        position: static;
+        bottom: 0;
+        width: 115%;
+        margin: -14px 31px 118px -65px;
+    }
+</style>
+<body>
+    
+    <header>
+    <div class="logo">
+        <nav>
+    <img src="AKANSHAlogo1.png" alt="Logo">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    </div>
+    </header>
+     <section id="home" div class ="home">
+        <div class="header-image">
+            <img src="image.jpg" alt="Header Image">
+        </div>
+        <div class="content">
+        <h1>Hi, I'm <span>Akansha Verma</span></h1>
+        <h2>Enthusiastic Coder and Frontend Developer</h2>
+        <div class="buttons">
+            <button onclick="window.open('Akansha_Updated_Resume_28_jan.pdf', '_blank')">Hire Me</button>
+            <button onclick="window.location.href = '#projects'">See Projects</button>
+        </div>
+        </div>
+    </section>
+    <section id ="about" div class="about-me">
+        <h2>About Me</h2>
+        <p>
+            I am Akansha Verma, currently pursuing a B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence from 
+            Institute of Engineering and Technology, Lucknow.
+            I am an avid learner with keen interest in problem solving skills.
+            My skills include programming languages like C++, C and Python
+             along with frontend tools like HTML,CSS and JavaScript, Bootstrap.
+            I have done many projects, 
+            you can scroll below to see them in detail. 
+           In addition to my technical expertise, I possess proficiency in utilizing Microsoft Word,
+               Excel, and PowerPoint. These essential software tools enable me to create professional documents, 
+               organize and analyze data efficiently, and develop impactful presentations. My adeptness with
+                MS Office suite enhances my ability to communicate effectively and streamline tasks across
+                 various projects. With a strong command of these applications, I can seamlessly integrate 
+                 technology into my work to achieve optimal results.        
+                     I believe I can do anything, if I put my mind to it.
+
+        </p>
+    </div>
+    <section class="skills" id="skills">
+        <div class= "heading">
+            <h2>Skills</h2>
+            <span>My Skills</span>
+        </div>
+<div class ="skills-container">
+    <div class="bars">
+        <div class="bars-box">
+            <h3>HTML</h3>
+            <div class="light-bar"></div>
+            <span>75%</span>
+            <div class="percent-bar html-bar"></div>
+        </div>
+    <div class="bars">
+        <div class="bars-box">
+            <h3>CSS</h3>
+            <span>70%</span>
+            <div class="light-bar"></div>
+            <div class="percent-bar css-bar"></div>
+            </div>
+    <div class="bars">
+        <div class="bars-box">
+                    <h3>MySQL</h3>
+                    <span>85%</span>
+                    <div class="light-bar"></div>
+                    <div class="percent-bar mysql-bar"></div>
+                </div>
+    <div class="bars">
+        <div class="bars-box">
+                    <h3>C++</h3>
+                        <span>90%</span>
+                        <div class="light-bar"></div>
+                        <div class="percent-bar cpp-bar"></div>
+                    </div>
+    <div class="bars">
+        <div class="bars-box">
+                            <h3>C</h3>
+                            <span>90%</span>
+                            <div class="light-bar"></div>
+                            <div class="percent-bar c-bar"></div>
+                        </div>
+    <div class="bars">
+        <div class="bars-box">
+                                <h3>JavaSript</h3>
+                                <span>70%</span>
+                                <div class="light-bar"></div>
+                                <div class="percent-bar java-bar"></div>
+                            </div>
+     <div class="bars">
+            <div class="bars-box">
+                                    <h3>Python</h3>
+                                    <span>75%</span>
+                                    <div class="light-bar"></div>
+                                    <div class="percent-bar python-bar"></div>
+                                </div>
+        </div>
+    </div>
+    </section>
+ <div class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>Grocery-Store-Management-System</h3>
+            <p>Software application for grocery stores enabling product addition, updating, and categorization by departments,
+                brands, or other criteria, streamlining store operations.
+                
+            </p>
+        </div>
+        <div class="project-item">
+            <h3>Food Delivery Website </h3>
+            <p>Currently working on this website. It is a courier service which implements the website’s visual design , Creating
+                intuitive and responsive user interfaces for browsing menus, selecting items, and placing orders.
+                
+            </p>
+        </div>
+        <div class="project-item">
+            <h3>TIC TAC TOE Game</h3>
+            <p>The website provides a user-friendly interface for players to engage in this simple yet entertaining game
+            </p>
+        </div>
+        <div class="project-item">
+            <h3>Personal Portfolio</h3>
+            <p>
+            </p>
+        </div>
+
+<div class="contact" id="contact">
+    <div class="container">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <div class="contact-item">
+                    <i class="far fa-envelope"></i><p>akanshav841@gmail.com</p>
+                </div>
+                <div class="social-icons">
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/akansha-verma-623a66232/" target="_blank"> linkedin</a>
+                        <p>www.linkedin.com/in/akansha-verma-623a66232</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/akanshav841" target="_blank">Github</a>
+                        <p>https://github.com/akanshav841</p>
+                    </div>
+                </div>
+                <div class="contact">
+                    <h2>Get in Touch</h2>
+                    <form action="#" method="post">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <textarea id="message" name="message" placeholder="Your Message" required styl = "width: 415px; height: 137px;" style = "width: 415px; height: 137px" ></textarea>
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="copy">
+        <p>&copy; 2023 Akansha Verma| All rights reserved.</p>
+    </div>
+</footer>
+</div>
+
+    
+<!-- </header> -->
+</body>
+</html>
