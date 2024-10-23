@@ -93,6 +93,18 @@
             font-size: 1.8rem;
         }
 
+        .profile-image {
+            margin-bottom: 20px;
+        }
+
+        .profile-image img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Makes it circular */
+            border: 5px solid #f39c12; /* Border color matching theme */
+            object-fit: cover; /* Ensures the image doesn't get distorted */
+        }
+
         .buttons {
             margin-top: 30px;
         }
@@ -166,106 +178,30 @@
             font-size: 1.4rem;
             margin-bottom: 10px;
         }
-        /* Contact Section - Adjust "Send" Button */
-.contact input[type="submit"] {
-    background-color: #f39c12;
-    color: black;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, border 0.3s ease;
-    border: 2px solid transparent;  /* Adds a border */
-    border-radius: 5px;  /* Slightly rounder */
-}
 
-.contact input[type="submit"]:hover {
-    background-color: #e67e22;
-    border: 2px solid white;  /* Adds a white border on hover */
-}
-
-/* Skills Section - Make bars less circular */
-.skills .bar {
-    background-color: rgba(255, 255, 255, 0.2);
-    width: 250px;
-    height:50px;
-    border-radius: 10px;  /* Reduced border-radius for a less circular look */
-    position: relative;
-    overflow: hidden;
-}
-
-.skills .bar span {
-    display: block;
-    height: 100%;
-    background-color: #f39c12;
-    animation: load 2s forwards;
-    border-radius: 10px;  /* Matches the outer bar */
-}
-
-.skills h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #f39c12;  /* Makes skill headers pop */
-    letter-spacing: 1px;  /* Adds spacing to make text more readable */
-}
-/* Adjusting Projects Section */
-.projects {
-    padding: 80px 30px;  /* Decreased padding for more compact layout */
-    background-color: #ecf0f1;  /* Light background for contrast */
-}
-
-.projects h2 {
-    color: #2c3e50;  /* Darker, elegant color */
-}
-
-.projects .project-item h3 {
-    color: #f39c12;  /* Matches the button color */
-}
-
-.projects .project-item p {
-    color: #7f8c8d;  /* Softer text color */
-}
-
-/* Adjusting Skills Section */
-.skills {
-    background-color: #2c3e50;
-    padding: 80px 30px;  /* Reduced padding for a snug fit */
-    color: white;
-}
-
-.skills h2 {
-    color: #f39c12;  /* Highlighted title */
-}
-
-.skills .bar {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.skills h3 {
-    color: #ecf0f1;
-}
-
-.bar span {
-    background-color: #f39c12;  /* Consistent bar fill color */
-}
-
-
-
-        .bar {
-            background-color: rgba(255, 255, 255, 0.1);
+        .skills .bar {
+            background-color: rgba(255, 255, 255, 0.2);
             width: 250px;
-            height: 30px;
-            border-radius: 25px;
+            height:50px;
+            border-radius: 10px;
             position: relative;
             overflow: hidden;
         }
 
-        .bar span {
+        .skills .bar span {
             display: block;
             height: 100%;
             background-color: #f39c12;
-            width: 0;
             animation: load 2s forwards;
-            border-radius: 25px;
+            border-radius: 10px;
+        }
+
+        .skills h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #f39c12;
+            letter-spacing: 1px;
         }
 
         .bar.html span { width: 85%; }
@@ -324,7 +260,6 @@
 
         .contact h2 {
             font-size: 2.8rem;
-        
         }
 
         .contact form {
@@ -394,6 +329,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="content">
+            <div class="profile-image">
+                <img src="your-image.jpg" alt="Akansha Verma's profile picture">
+            </div>
             <h1>Hi, I'm <span>Akansha Verma</span></h1>
             <h2>Enthusiastic Coder and Frontend Developer</h2>
             <div class="buttons">
@@ -406,74 +344,60 @@
     <!-- About Section -->
     <section class="about" id="about">
         <h2>About Me</h2>
-        <p>
-            I'm Akansha Verma, a B.Tech student specializing in Computer Science and Artificial Intelligence. I have a passion for crafting beautiful, 
-            responsive web designs and solving complex coding problems. Over the years, I’ve honed my skills in HTML, CSS, JavaScript, and Python, 
-            and I enjoy combining creativity and logic to bring ideas to life. My focus is to create user-centric designs with optimal performance.
-        </p>
+        <p>Hello! I'm Akansha Verma, a passionate coder with a strong interest in frontend development and web design. I have been involved in various projects that challenge my creativity and coding skills. My goal is to build responsive, accessible, and dynamic websites that deliver great user experiences.</p>
     </section>
 
     <!-- Skills Section -->
     <section class="skills" id="skills">
-        <h2>Skills</h2>
+        <h2>My Skills</h2>
         <div class="skills-container">
-            <div class="bar">
+            <div class="bar html">
                 <h3>HTML</h3>
-                <div class="bar html"><span></span></div>
+                <span></span>
             </div>
-            <div class="bar">
+            <div class="bar css">
                 <h3>CSS</h3>
-                <div class="bar css"><span></span></div>
+                <span></span>
             </div>
-            <div class="bar">
+            <div class="bar javascript">
                 <h3>JavaScript</h3>
-                <div class="bar javascript"><span></span></div>
+                <span></span>
             </div>
-            <div class="bar">
+            <div class="bar python">
                 <h3>Python</h3>
-                <div class="bar python"><span></span></div>
+                <span></span>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
     <section class="projects" id="projects">
-        <h2>Projects</h2>
+        <h2>My Projects</h2>
         <div class="project-item">
-            <h3>Weather App</h3>
-            <p>
-                This is a fully functional weather application created using HTML, CSS, and JavaScript. It fetches real-time weather data from a public 
-                API and displays current conditions based on the user's location.
-            </p>
+            <h3>Project One</h3>
+            <p>A web development project where I created a fully responsive website using HTML, CSS, and JavaScript.</p>
         </div>
         <div class="project-item">
-            <h3>Portfolio Website</h3>
-            <p>
-                The very website you're browsing right now! Built from scratch with a clean, responsive design, showcasing my skills and projects. 
-                The site features smooth animations, hover effects, and is fully optimized for mobile viewing.
-            </p>
+            <h3>Project Two</h3>
+            <p>This is a Python-based project where I developed a machine learning model to classify images using TensorFlow.</p>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Contact Me</h2>
-        <form action="https://formspree.io/akanshav841@gmail.com" method="POST">
+        <form action="submit-form.php" method="post">
             <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="_replyto" placeholder="Your Email" required>
-            <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-            <input type="submit" value="Send">
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message">
         </form>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Akansha Verma. All Rights Reserved. Connect with me on 
-            <a href="https://www.linkedin.com/in/akansha-verma/" target="_blank" style="color: #f39c12;">LinkedIn</a> 
-            and <a href="https://github.com/akanshaverma" target="_blank" style="color: #f39c12;">GitHub</a>.
-        </p>
+        <p>© 2024 Akansha Verma. All Rights Reserved.</p>
     </footer>
 
 </body>
 </html>
-
